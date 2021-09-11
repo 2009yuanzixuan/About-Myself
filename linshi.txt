@@ -1,0 +1,24 @@
+       <script>
+            
+            function cg(){
+                $("body").css("background-image","url(static/images/grey.jpg)")
+                $("h1").css("color","Beige")
+            }
+            function cb(){
+                $("body").css("background-image","url(static/images/bg.png)")
+            }
+            function cp(){
+                $("body").css("background-image","url(static/images/pink.jpg)")
+            }
+        </script>
+<div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp功能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <a class="dropdown-item" onclick="cg()" id="daohang"><h6>素描主题</h6></a>
+                        <a class="dropdown-item" onclick="cb()" id="daohang"><h6>蓝色主题</h6></a>
+                        <a class="dropdown-item" onclick="cp()" id="daohang"><h6>粉色主题</h6></a>
+
+                    </div>
+                </div>
