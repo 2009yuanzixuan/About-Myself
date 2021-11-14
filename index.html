@@ -4,7 +4,7 @@
     <head>
         <!--外部js文件导入，以及icon的搭建-->
         <link rel="icon" href="icon/yzx.ico" >
-        <link rel="stylesheet"  href="templates/A_main.css">
+        <link rel="stylesheet"  href="templates/style/A_main.css">
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -59,7 +59,7 @@
             }
             #percent{
                 width: 100%;
-                height:280px;
+                height:220px;
             }
             /*返回顶部按钮*/
             #myBtn {
@@ -93,7 +93,7 @@
 
             #private{
                 position:fixed;
-                top: 515px;
+                top: 71%;
                 right:0.5%;
                 z-index: 999;
                 width: 7.5%;
@@ -104,57 +104,13 @@
             /*返回顶部按钮*/
         </style>
         <!--=======================================CSS部分===========================================-->
-        <script>
-            
-            function cg(){
-                $("body").css("background-image","url(static/images/grey.jpg)");
-                $("h1").css("color","Beige");
-            }
-            function cb(){
-                $("body").css("background-image","url(static/images/bg.png)");
-                $("h1").css("color","rgba(50,50,50,0.5)");
-            }
-            function cp(){
-                $("body").css("background-image","url(static/images/pink.jpg)");
-                $("h1").css("color","rgba(50,50,50,0.5");
-            }
-            function displayDate(){
-	            document.getElementById("demo").innerHTML=Date();
-            }
-            function validateForm(){
-                var x=document.forms["myForm"]["fname"].value;
-                if (x==null || x==""){
-                    alert("姓必须填写");
-                    return false;
-                }
-            }
-        </script>
+        <script src="templates/js/A_main.js"></script>
 
 
     </head>
     <body>
         <!--=======================================JS部分===========================================-->
-        <script>
-            // 当网页向下滑动 20px 出现"返回顶部" 按钮
-            window.onscroll = function() {scrollFunction()};
-            
-            function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-            
-            // 点击按钮，返回顶部
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-
-        
-            
-        </script>
+        <script src="templates/js/B_main.js"></script>
         <!--=======================================JS部分===========================-->
 
         <!--                                                                        -->
@@ -216,7 +172,7 @@
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                         <a class="dropdown-item" onclick="cg()" id="daohang"><h6>素描主题</h6></a>
@@ -226,10 +182,10 @@
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="false" style="background-color:rgba(209,236,240,0.6); border-color: rgba(250,250,255,0); color:rgba(50,120,255,0.8);">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;api&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                        <a class="dropdown-item" href='templates/p.html' id="daohang"><h6>飘向北方</h6></a>
+                        <a class="dropdown-item" href='templates/ques.html' id="daohang"><h6>默契大考验</h6></a>
                         
                     </div>
                 </div>
@@ -242,7 +198,7 @@
 
 
             <!--默契大考验入口-->
-            <a href="templates/ques.html"><img  id= "private" src='static/images/默契.gif'></a>
+            <a href="templates/html/ques.html"><img  id= "private" src='static/images/默契.gif'></a>
 
 
 
@@ -363,16 +319,16 @@
                 <div class="mus" id="music">
                     <h1 >最爱音乐</h1>
                     <div class="coding-big">
-                        <p style="font-size:22px;">记念:</p><audio src="static/music/记念.mp3" controls="controls"></audio>
+                        <p style="font-size:22px;">记念:</p><audio src="static/music/记念.wav" controls="controls"></audio>
                     </div>
                     <div class="coding-big">
-                        <p style="font-size:22px;">起风了:</p><audio src="static/music/起风了.mp3" controls="controls"></audio>
+                        <p style="font-size:22px;">起风了:</p><audio src="static/music/起风了.wav" controls="controls"></audio>
                     </div>
                     <div class="coding-big">
-                        <p style="font-size:22px;">半生雪:</p><audio src="static/music/半生雪.mp3" controls="controls"></audio>
+                        <p style="font-size:22px;">半生雪:</p><audio src="static/music/半生雪.wav" controls="controls"></audio>
                     </div>
                     <div class="coding-big">
-                        <p style="font-size:22px;">飘向北方:</p><audio src="static/music/飘向北方.mp3" controls="controls"></audio>
+                        <p style="font-size:22px;">飘向北方:</p><audio src="static/music/飘向北方.wav" controls="controls"></audio>
                     </div>
                 </div>
 
